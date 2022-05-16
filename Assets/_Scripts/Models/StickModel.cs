@@ -98,8 +98,6 @@ public class StickModel : MonoBehaviour
         newPosition.x += -cutterOnTheXLeft * (Helper.Cos(transform.eulerAngles.y) * overageDistance / 2);
         newPosition.z += -cutterOnTheZLeft * (Helper.Sin(transform.eulerAngles.y) * overageDistance / 2);
         //**Çubuk her seferinde ortalansın istenirse bu satır yorum satırına alınabilir**
-       // transform.position = newPosition;
-        
         transform.localScale = newScale;
         
         //Artık parçanın değer ataması yapıldı
@@ -108,6 +106,8 @@ public class StickModel : MonoBehaviour
         leftoverPart.transform.position = leftOverPosition;
         leftoverPart.AddComponent<Rigidbody>();
         leftoverPart.GetComponent<MeshRenderer>().material = _stickMaterial;
+        transform.position = newPosition;
+
     }
 
     public void SliceByY(Collider cutter)
