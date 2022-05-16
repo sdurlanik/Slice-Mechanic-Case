@@ -8,6 +8,7 @@ public class StickModel : MonoBehaviour
     
     [SerializeField] private Vector3 _stickHorizontalStatePosition, _stickVerticalStatePosition;
     [SerializeField] private Vector3 _stickHorizontalStateAngle, _stickVerticalStateAngle;
+    [SerializeField] private Material _stickMaterial;
 
     private void Awake()
     {
@@ -97,7 +98,7 @@ public class StickModel : MonoBehaviour
         newPosition.x += -cutterOnTheXLeft * (Helper.Cos(transform.eulerAngles.y) * overageDistance / 2);
         newPosition.z += -cutterOnTheZLeft * (Helper.Sin(transform.eulerAngles.y) * overageDistance / 2);
         //**Çubuk her seferinde ortalansın istenirse bu satır yorum satırına alınabilir**
-        transform.position = newPosition;
+       // transform.position = newPosition;
         
         transform.localScale = newScale;
         
@@ -106,6 +107,7 @@ public class StickModel : MonoBehaviour
         leftoverPart.transform.localScale = leftOverScale;
         leftoverPart.transform.position = leftOverPosition;
         leftoverPart.AddComponent<Rigidbody>();
+        leftoverPart.GetComponent<MeshRenderer>().material = _stickMaterial;
     }
 
     public void SliceByY(Collider cutter)
@@ -123,6 +125,8 @@ public class StickModel : MonoBehaviour
         leftoverPart.transform.rotation = transform.rotation;
         leftoverPart.transform.position = new Vector3(transform.position.x, stickBottomY + leftoverPart.transform.localScale.y, transform.position.z);
         leftoverPart.AddComponent<Rigidbody>();
+        leftoverPart.GetComponent<MeshRenderer>().material = _stickMaterial;
+
         //Hata olmasını önelemek amaçlı lokal konumlara geçilmesi için gerekli komutlar yürütüldü
         VerticalState();
         Character.ClimbingState();

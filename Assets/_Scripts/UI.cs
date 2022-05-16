@@ -32,7 +32,7 @@ public class UI : MonoBehaviour
         _gameOverScreen.SetActive(true);
         
         var rectTransformPosition = _ScoreText.rectTransform.anchoredPosition;
-        rectTransformPosition.y = -520;
+        rectTransformPosition.y = -500;
         _ScoreText.rectTransform.anchoredPosition = rectTransformPosition;
         
         _ScoreText.text = "Score: " + _score;

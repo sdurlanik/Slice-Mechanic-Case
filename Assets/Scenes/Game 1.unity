@@ -497,7 +497,7 @@ Transform:
   - {fileID: 950086609}
   - {fileID: 676458107}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &74064927
 PrefabInstance:
@@ -813,6 +813,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec49268c690b1804fa6e03a7a500d716, type: 3}
+--- !u!1 &141055190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141055191}
+  - component: {fileID: 141055192}
+  m_Layer: 0
+  m_Name: SlideEnterTrigger (1)
+  m_TagString: Slide
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141055191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141055190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.88, y: -0.032, z: 2.596}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.20000003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667123350}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &141055192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141055190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.18542308}
+  m_Center: {x: 0, y: 0, z: 0.40728858}
 --- !u!4 &174813743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6563498551190375193, guid: ec49268c690b1804fa6e03a7a500d716, type: 3}
@@ -1750,7 +1795,7 @@ Transform:
   - {fileID: 7301540789848503617}
   - {fileID: 908838822}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &350212945
 PrefabInstance:
@@ -2702,7 +2747,7 @@ Transform:
   - {fileID: 1945379797}
   - {fileID: 599263722}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &491612109
 PrefabInstance:
@@ -3767,6 +3812,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1084668744}
+  - {fileID: 1297193060}
   - {fileID: 1817233629}
   - {fileID: 482765304}
   - {fileID: 1679672190}
@@ -3776,6 +3823,7 @@ Transform:
   - {fileID: 64527514}
   - {fileID: 931421801}
   - {fileID: 1943004350}
+  - {fileID: 141055191}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4551,7 +4599,7 @@ Transform:
   - {fileID: 707496857}
   - {fileID: 131101202}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &877565775 stripped
 GameObject:
@@ -4652,7 +4700,7 @@ GameObject:
   - component: {fileID: 931421802}
   m_Layer: 0
   m_Name: EndSlide (1)
-  m_TagString: Untagged
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4670,7 +4718,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 667123350}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 84, z: 90}
 --- !u!65 &931421802
 BoxCollider:
@@ -4854,6 +4902,7 @@ MonoBehaviour:
   _stickVerticalStatePosition: {x: 0, y: 0, z: 0.033}
   _stickHorizontalStateAngle: {x: 0, y: 0, z: 90}
   _stickVerticalStateAngle: {x: 0, y: 0, z: 0}
+  _stickMaterial: {fileID: 2100000, guid: 88d5d162799c809499f6ffc05e10197c, type: 2}
 --- !u!1 &950086607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,6 +5249,51 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.013856984, z: 0.017320508}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1084668743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084668744}
+  - component: {fileID: 1084668745}
+  m_Layer: 0
+  m_Name: SlideExitTrigger
+  m_TagString: SlideExit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084668744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084668743}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.675, y: 0, z: 1.503}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.20000003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667123350}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1084668745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084668743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.18542308}
+  m_Center: {x: 5.3881163e-16, y: 0, z: 0.40728858}
 --- !u!1001 &1088463379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6023,6 +6117,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6563498551190375193, guid: ec49268c690b1804fa6e03a7a500d716, type: 3}
   m_PrefabInstance: {fileID: 13873758}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1297193059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297193060}
+  - component: {fileID: 1297193061}
+  m_Layer: 0
+  m_Name: SlideEnterTrigger
+  m_TagString: Slide
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297193060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297193059}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.053, y: 0.231, z: 1.503}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 0.20000003}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667123350}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1297193061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297193059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.18542308}
+  m_Center: {x: 5.3881163e-16, y: 0, z: 0.40728858}
 --- !u!1 &1304979589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7326,7 +7465,7 @@ Transform:
   - {fileID: 1258865676}
   - {fileID: 1523522728}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1680929450
 PrefabInstance:
@@ -8070,7 +8209,7 @@ Transform:
   - {fileID: 280105955}
   - {fileID: 188638788}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1819016881
 PrefabInstance:
@@ -8580,7 +8719,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!95 &1940659624
 Animator:
@@ -8649,7 +8788,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 89.5
+  m_fontSize: 100
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8713,7 +8852,7 @@ GameObject:
   - component: {fileID: 1943004347}
   m_Layer: 0
   m_Name: EndSlide (2)
-  m_TagString: Untagged
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8794,7 +8933,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 667123350}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 96, z: 90}
 --- !u!1001 &1943174047
 PrefabInstance:
@@ -9309,7 +9448,7 @@ Transform:
   - {fileID: 376001526}
   - {fileID: 744510859}
   m_Father: {fileID: 667123350}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &2054885513
 PrefabInstance:

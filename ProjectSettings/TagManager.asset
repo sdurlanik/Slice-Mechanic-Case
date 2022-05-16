@@ -14,6 +14,7 @@ TagManager:
   - TurnLeftTrigger
   - Diamond
   - EndPlane
+  - SlideExit
   layers:
   - Default
   - TransparentFX

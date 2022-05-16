@@ -143,14 +143,18 @@ public class PlayerController : MonoBehaviour
         ObstacleXTrigger(other);
         ObstacleYTrigger(other);
         EndTrigger(other);
+        SlideTrigger(other);
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void SlideTrigger(Collider other)
     {
-        print(other.contacts.Length);
-    }
+        if (other.CompareTag("Slide"))
+            CharacterModel.instance.modelAnimator.SetBool("slide", true);
+        if (other.CompareTag("SlideExit"))
+            CharacterModel.instance.modelAnimator.SetBool("slide", false);
 
+    }
     private void WoodTrigger(Collider other)
     {
         if (!other.CompareTag("Wood")) return;
