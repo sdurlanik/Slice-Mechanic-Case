@@ -1930,7 +1930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376001526}
   - component: {fileID: 376001525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TurnPoint
   m_TagString: TurnRightTrigger
   m_Icon: {fileID: 0}
@@ -4801,7 +4801,7 @@ GameObject:
   - component: {fileID: 945482099}
   - component: {fileID: 945482101}
   - component: {fileID: 945482098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
